@@ -14,7 +14,7 @@ function init() {
     const container = document.getElementById('example-container-1');
 
     // document.body.appendChild(container);
- 
+
     // 创建相机
     camera = new THREE.PerspectiveCamera(50, window.innerWidth / window.innerHeight, 0.25, 100000);
     camera.position.set(4, 4, 4);
