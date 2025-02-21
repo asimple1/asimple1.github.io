@@ -268,164 +268,62 @@
   </section>
   <br>
 
-  <!-- reconstruction showcase -->
-  <!-- <section>
-    <div class="container">
-      <div class="row">
-        <div class="col-12 text-center">
-            <h3>Segmentation results showcase</h3>
-            <hr style="margin-top:0px">
-            <div class="embed-responsive embed-responsive-16by9">
-
-                <iframe style="clip-path: inset(1px 1px)" width="100%" height="100%" src="https://sketchfab.com/playlists/embed?autostart=1&autospin=0.25&amp;collection=18b164e0c813435687bcb59908ed3937" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture; fullscreen" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
-            </div>
-            <br>
-            <p> Zoom in by scrolling. You can toggle the “Single Sided” option in Model Inspector (pressing I key) to enable back-face culling (see through walls).</p>
-        </div>
-      </div>
-    </div>
-  </section>
-  <br> -->
-
-
-    <!-- <script type="module">
-      import * as THREE from 'three';
-      import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
-      import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
-
-      let camera, scene, renderer, model, controls;
-      let isUserInteracting = false;
-      const clock = new THREE.Clock(); // 用来跟踪时间，以便更新动画
-
-      init();
-
-      function init() {
-          const container = document.createElement('div');
-          document.body.appendChild(container);
-
-          // 创建相机
-          camera = new THREE.PerspectiveCamera(40, window.innerWidth / window.innerHeight, 0.25, 100000);
-          camera.position.set(30, 30, 30);
-
-          // 创建场景
-          scene = new THREE.Scene();
-          scene.background = new THREE.Color("#88B9DD");
-
-          // 添加光源
-          const directionalLight = new THREE.DirectionalLight(0xffffff, 5);
-          directionalLight.position.set(5, 5, 5);
-          scene.add(directionalLight);
-
-          const directionalLight2 = new THREE.DirectionalLight(0xffffff, 5);
-          directionalLight2.position.set(-5, 5, -5);
-          scene.add(directionalLight2);
-
-          // const directionalLight3 = new THREE.DirectionalLight(0xffffff, 0);
-          // directionalLight3.position.set(0, 0, -5);
-          // scene.add(directionalLight3);
-
-    // axis helper
-    const axesHelper = new THREE.AxesHelper(5);
-    scene.add(axesHelper);
-    
-    // tiny mesh
-    // const geometry = new THREE.SphereGeometry(1, 32, 32);
-    // const material = new THREE.MeshStandardMaterial({ color: 0xff0000 });
-    // const sphere = new THREE.Mesh(geometry, material);
-    // sphere.position.set(-3, 0, 0);
-    // scene.add(sphere);
-
-          // 加载GLTF模型
-          // const loader = new GLTFLoader().setPath('my_handcrafted_gltf/');
-          const loader = new GLTFLoader().setPath('my_handcrafted_gltf_merged/');
-          loader.load('model.gltf', async function(gltf) {
-              model = gltf.scene;
-              model.rotation.set(-Math.PI / 2, 0, Math.PI);
-              await renderer.compileAsync(model, camera, scene);
-              scene.add(model);
-          });
-
-          // 创建WebGL渲染器
-          renderer = new THREE.WebGLRenderer({ antialias: true });
-          renderer.setPixelRatio(window.devicePixelRatio);
-          renderer.setSize(window.innerWidth, window.innerHeight);
-          renderer.toneMapping = THREE.ACESFilmicToneMapping;
-          renderer.toneMappingExposure = 1;
-          container.appendChild(renderer.domElement);
-
-          // 创建控制器
-          controls = new OrbitControls(camera, renderer.domElement);
-          controls.enableDamping = true; // 开启阻尼
-          controls.dampingFactor = 0.2; // 设置阻尼强度，值越大，旋转越慢
-          controls.screenSpacePanning = false; // 禁用屏幕平移
-          controls.minDistance = 2;
-          controls.maxDistance = 10;
-
-          controls.target.set(0, 0, -0.2);
-          controls.update(); // 更新控制器
-
-          // 监听窗口大小变化
-          window.addEventListener('resize', onWindowResize);
-          // 启动渲染
-          render();
-      }
-
-      function onWindowResize() {
-          camera.aspect = window.innerWidth / window.innerHeight;
-          camera.updateProjectionMatrix();
-          renderer.setSize(window.innerWidth, window.innerHeight);
-      }
-
-      function render() {
-          // 获取时间差
-          const delta = clock.getDelta();
-
-          // 自动旋转
-          if (!isUserInteracting && model) {
-              model.rotation.z -= 0.002; // 控制旋转速度
-          }
-
-          // 更新控制器，确保平滑过渡
-          controls.update(); 
-
-          // 渲染场景
-          renderer.render(scene, camera);
-
-          // 继续下一帧
-          requestAnimationFrame(render);
-      }
-
-      // 判断用户是否正在交互
-      controls.addEventListener('change', () => {
-          isUserInteracting = true;
-      });
-  </script> -->
-
-  <!-- <script type="module" src="js/example_vis.js"></script>
-  <script type="module" src="js/example_vis.js"></script> -->
-
-<!-- Example Visualization Section -->
-<!-- <div id="three-container">
-  <script type="module" src="js/example_vis.js"></script>
-
-</div> -->
 <section>
   <div class="container">
+    <span style="padding: 0px 5px;color: rgb(255, 255, 255);background-color: rgb(174, 199, 232);">reference obj</span>
+    <span style="padding: 0px 5px;color: rgb(255, 255, 255);background-color: rgb(0, 255, 0);">gt obj</span>
+    <span style="padding: 0px 5px;color: rgb(255, 255, 255);background-color: rgb(255, 0, 0);">my results</span>
+    <span style="padding: 0px 5px;color: rgb(255, 255, 255);background-color: rgb(0, 0, 255);">Chat-Scene results</span>
+
     <div class="row">
       <div class="col-6">
-        <h4>Example 1</h4>
+        <h4>Example 1: The <span style="color: rgb(0, 255, 0);">chair</span> faraway from <span style="color: rgb(174, 199, 232);">it</span></h4>
         <div class="example-container" id="example-container-1">
           <script type="module" src="js/example_vis_1.js"></script>
         </div>
       </div>
 
       <div class="col-6">
-        <h4>Example 2</h4>
+        <h4>Example 2: The <span style="color: rgb(0, 255, 0);">cabinet</span> proximal to <span style="color: rgb(174, 199, 232);">it</span></h4>
         <div class="example-container" id="example-container-2">
           <script type="module" src="js/example_vis_2.js"></script>
         </div>
       </div>
     </div>
+
+    <div class="row">
+      <div class="col-6">
+        <h4>Example 3: The <span style="color: rgb(0, 255, 0);">blackboard</span> at a distance from <span style="color: rgb(174, 199, 232);">it</span></h4>
+        <div class="example-container" id="example-container-3">
+          <script type="module" src="js/example_vis_3.js"></script>
+        </div>
+      </div>
+
+      <div class="col-6">
+        <h4>Example 4: The <span style="color: rgb(0, 255, 0);">door</span> far-off from <span style="color: rgb(174, 199, 232);">it</span></h4>
+        <div class="example-container" id="example-container-4">
+          <script type="module" src="js/example_vis_4.js"></script>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="row">
+      <div class="col-6">
+        <h4>Example 5: The <span style="color: rgb(0, 255, 0);">toilet</span> distant from <span style="color: rgb(174, 199, 232);">it</span></h4>
+        <div class="example-container" id="example-container-5">
+          <script type="module" src="js/example_vis_5.js"></script>
+        </div>
+      </div>
+
+      <div class="col-6">
+        <h4>Example 6: The <span style="color: rgb(0, 255, 0);">dresser</span> far from <span style="color: rgb(174, 199, 232);">it</span></h4>
+        <div class="example-container" id="example-container-6">
+          <script type="module" src="js/example_vis_6.js"></script>
+        </div>
+      </div>
+    </div>
+
   </div>
 </section>
 
