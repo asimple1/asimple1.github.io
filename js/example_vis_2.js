@@ -16,8 +16,8 @@ function init() {
     // document.body.appendChild(container);
 
     // 创建相机
-    camera = new THREE.PerspectiveCamera(40, window.innerWidth / window.innerHeight, 0.25, 100000);
-    camera.position.set(30, 30, 30);
+    camera = new THREE.PerspectiveCamera(50, window.innerWidth / window.innerHeight, 0.25, 100000);
+    camera.position.set(4, 4, 4);
 
     // 创建场景
     scene = new THREE.Scene();
@@ -49,7 +49,7 @@ function init() {
 
     // 加载GLTF模型
     // const loader = new GLTFLoader().setPath('my_handcrafted_gltf/');
-    const loader = new GLTFLoader().setPath('my_handcrafted_gltf_merged/');
+    const loader = new GLTFLoader().setPath('public/my_handcrafted_gltf_merged/');
     loader.load('model.gltf', async function(gltf) {
         model = gltf.scene;
         model.rotation.set(-Math.PI / 2, 0, Math.PI);
