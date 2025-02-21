@@ -21,7 +21,7 @@
   </head>
 
   <!-- cover -->
-  <section>
+  <!-- <section>
     <div class="jumbotron text-center mt-0">
       <div class="container">
         <div class="row">
@@ -68,11 +68,11 @@
         </div>
       </div>
     </div>
-  </section>
+  </section> -->
 
 
   <!-- abstract -->
-  <section>
+  <!-- <section>
     <div class="container">
       <div class="row">
         <div class="col-12 text-center">
@@ -83,7 +83,7 @@
       </div>
     </div>
   </section>
-  <br>
+  <br> -->
 
   <!-- overview video -->
   <!-- <section>
@@ -109,16 +109,18 @@
           <h3>Comparisons</h3>
           <hr style="margin-top:0px">
           <div class="column is-full-width">
-            <div class="tabs">
+            <!-- <div class="tabs">
               <div class="tab" data-tab-for="example1,example2" onclick="showExamples('example1', 'example2', this)">ScanNet</div>
               <div class="tab" data-tab-for="example3,example4" onclick="showExamples('example3', 'example4', this)">ScanNet++</div>
               <div class="tab" data-tab-for="example5,example6" onclick="showExamples('example5', 'example6', this)">KITTI-360</div>
+            </div> -->
+            <div class="col-6">
+              <h4>Example 1: The <span style="color: rgb(0, 255, 0);">chair</span> faraway from <span style="color: rgb(174, 199, 232);">it</span></h4>
             </div>
-
             <div id="example1" class="bal-container-small example">
-    ∂
               <div class="bal-after">
-                <img src="src/0616-ours.png">
+                <!-- <img src="src/0616-ours.png"> -->
+                <img src="src_my/scene0015_00_snapshot00.png">
                 <div class="bal-afterPosition afterLabel" style="z-index:1;">
                   Ours
                 </div>
@@ -126,9 +128,10 @@
             
               <div class="bal-before" style="width:1.910828025477707%;">
                 <div class="bal-before-inset" style="width: 628px;">
-                <img src="src/0616-mask3d.png">
+                <!-- <img src="src/0616-mask3d.png"> -->
+                <img src="src_my/scene0015_00_snapshot01.png">
                   <div class="bal-beforePosition beforeLabel">
-                    Mask3D [Schult 2023]
+                    Chat-Scene[NeurIPS'24]
                   </div>
                 </div>
               </div>
@@ -138,11 +141,14 @@
                 <span class="handle-right-arrow"></span>
               </div>
             </div>
-
+            <div class="col-6">
+              <h4>Example 2: The <span style="color: rgb(0, 255, 0);">cabinet</span> proximal to <span style="color: rgb(174, 199, 232);">it</span></h4>
+            </div>
             <div id="example2" class="bal-container-small example" style="display:none;">
-    
+              
               <div class="bal-after">
-                <img src="src/0549-ours.png">
+                <!-- <img src="src/0616-ours.png"> -->
+                <img src="src_my/scene0025_00_snapshot00.png">
                 <div class="bal-afterPosition afterLabel" style="z-index:1;">
                   Ours
                 </div>
@@ -150,9 +156,10 @@
             
               <div class="bal-before" style="width:1.910828025477707%;">
                 <div class="bal-before-inset" style="width: 628px;">
-                <img src="src/0549-sam3d.png">
+                <!-- <img src="src/0616-mask3d.png"> -->
+                <img src="src_my/scene0025_00_snapshot01.png">
                   <div class="bal-beforePosition beforeLabel">
-                    SAM3D [Yang 2023]
+                    Chat-Scene[NeurIPS'24]
                   </div>
                 </div>
               </div>
@@ -162,106 +169,7 @@
                 <span class="handle-right-arrow"></span>
               </div>
             
-            </div>
-
-            <div id="example3" class="bal-container-small example">
-    
-              <div class="bal-after">
-                <img src="src/21d-ours.png">
-                <div class="bal-afterPosition afterLabel" style="z-index:1;">
-                  Ours
-                </div>
-              </div>
-            
-              <div class="bal-before" style="width:1.910828025477707%;">
-                <div class="bal-before-inset" style="width: 628px;">
-                <img src="src/21d-mask3d.png">
-                  <div class="bal-beforePosition beforeLabel">
-                    Mask3D [Schult 2023]
-                  </div>
-                </div>
-              </div>
-            
-              <div class="bal-handle" style="left:1.910828025477707%;">
-                <span class=" handle-left-arrow"></span>
-                <span class="handle-right-arrow"></span>
-              </div>
-            </div>
-
-            <div id="example4" class="bal-container-small example" style="display:none;">
-    
-              <div class="bal-after">
-                <img src="src/578-ours.png">
-                <div class="bal-afterPosition afterLabel" style="z-index:1;">
-                  Ours
-                </div>
-              </div>
-            
-              <div class="bal-before" style="width:1.910828025477707%;">
-                <div class="bal-before-inset" style="width: 628px;">
-                <img src="src/578-sam3d.png">
-                  <div class="bal-beforePosition beforeLabel">
-                    SAM3D [Yang 2023]
-                  </div>
-                </div>
-              </div>
-            
-              <div class="bal-handle" style="left:1.910828025477707%;">
-                <span class=" handle-left-arrow"></span>
-                <span class="handle-right-arrow"></span>
-              </div>
-            
-            </div>
-
-            <div id="example5" class="bal-container-small example">
-    
-              <div class="bal-after">
-                <img src="src/09-ours.png">
-                <div class="bal-afterPosition afterLabel" style="z-index:1;">
-                  Ours
-                </div>
-              </div>
-            
-              <div class="bal-before" style="width:1.910828025477707%;">
-                <div class="bal-before-inset" style="width: 628px;">
-                <img src="src/09-mask3d.png">
-                  <div class="bal-beforePosition beforeLabel">
-                    Mask3D [Schult 2023]
-                  </div>
-                </div>
-              </div>
-            
-              <div class="bal-handle" style="left:1.910828025477707%;">
-                <span class=" handle-left-arrow"></span>
-                <span class="handle-right-arrow"></span>
-              </div>
-            
-            </div>
-
-            <div id="example6" class="bal-container-small example">
-    
-              <div class="bal-after">
-                <img src="src/00-ours.png">
-                <div class="bal-afterPosition afterLabel" style="z-index:1;">
-                  Ours
-                </div>
-              </div>
-            
-              <div class="bal-before" style="width:1.910828025477707%;">
-                <div class="bal-before-inset" style="width: 628px;">
-                <img src="src/00-sam3d.png">
-                  <div class="bal-beforePosition beforeLabel">
-                    SAM3D [Yang 2023]
-                  </div>
-                </div>
-              </div>
-            
-              <div class="bal-handle" style="left:1.910828025477707%;">
-                <span class=" handle-left-arrow"></span>
-                <span class="handle-right-arrow"></span>
-              </div>
-            
-            </div>
+  
         </div>
       </div>
     </div>
@@ -328,7 +236,7 @@
 </section>
 
   <!-- citing -->
-  <div class="container">
+  <!-- <div class="container">
     <div class="row ">
       <div class="col-12">
           <h3>Citation</h3>
@@ -343,7 +251,7 @@
           <hr>
       </div>
     </div>
-  </div>
+  </div> -->
 
   <footer class="text-center" style="margin-bottom:10px">
       Thanks to <a href="https://lioryariv.github.io/" target="_blank">Lior Yariv</a> for the <a href="https://lioryariv.github.io/idr/" target="_blank">website template</a>.

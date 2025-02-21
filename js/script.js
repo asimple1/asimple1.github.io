@@ -82,8 +82,8 @@ function showExamples(exampleId1, exampleId2, tabElement) {
   
   // 当文档加载完成时，自动显示并激活Tab 2，并初始化BeforeAfter
   document.addEventListener('DOMContentLoaded', function() {
-    var tab2 = document.querySelector('[data-tab-for="example3,example4"]');
-    showExamples('example3', 'example4', tab2);
+    var tab2 = document.querySelector('[data-tab-for="example1,example2"]');
+    showExamples('example1', 'example2', tab2);
   });
   
   
